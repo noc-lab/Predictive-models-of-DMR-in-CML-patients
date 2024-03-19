@@ -11,7 +11,7 @@ To use this example, please go to the folder named "CML_example". Download the f
 
 ## Citation
 
-If you use the modules, please cite this paper: 
+If you use the modules, please cite the paper: 
 
 ```text
 @article{
