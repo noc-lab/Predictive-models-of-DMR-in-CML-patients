@@ -11,8 +11,13 @@ To use this example, please go to the folder named "CML_example". Download the f
 
 ## Citation
 
-If you use the modules, please cite this paper: TBD
+If you use the modules, please cite this paper: 
 
+```text
+@article{
+
+}
+```
 
 ## Contact information
 
