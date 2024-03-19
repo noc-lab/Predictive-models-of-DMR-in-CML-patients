@@ -11,7 +11,7 @@ To use this example, please go to the folder named "CML_example". Then download 
 
 ## Citation
 
-If you use the module, please cite this paper: TBD
+If you use the modules, please cite this paper: TBD
 
 
 ## Contact information
