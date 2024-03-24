@@ -43,18 +43,6 @@ def model_long_12():
         print('The input value for BCR-ABL1 ratio (percantage) at 6 months is invalid.')
         Mol_6m_IM = float(input("Enter BCR-ABL1 ratio (percantage) at 6 months after start of Imatinib: "))
 
-    Mol_9m_IM = None
-    # while Mol_9m_IM is None:
-    try:
-        user_input = input("Enter BCR-ABL1 ratio (percantage) at 9 months after start of Imatinib (or 'None' to represent None): ")
-        if user_input.lower() == 'none':
-            Mol_9m_IM = None
-        else:
-            Mol_9m_IM = float(user_input)
-    except ValueError:
-        print('The input value for BCR-ABL1 ratio (percantage) at 9 months is invalid.')
-        Mol_9m_IM = float(input("Enter BCR-ABL1 ratio (percantage) at 9 months after start of Imatinib: "))
-
 
     Mol_12m_IM = None
     # while Mol_12m_IM is None:
@@ -146,7 +134,6 @@ def model_long_12():
     variable_dict = {
         'Mol_3m_IM' : Mol_3m_IM,
         'Mol_6m_IM': Mol_6m_IM,  
-        'Mol_9m_IM': Mol_9m_IM,
         'Mol_12m_IM': Mol_12m_IM,
         'COMPLETE_MOLECULAR_RESPONSE' : COMPLETE_MOLECULAR_RESPONSE,
         'date_of_MR' : date_of_CMR,
@@ -159,7 +146,7 @@ def model_long_12():
     df = pd.concat([df, pd.DataFrame(variable_dict, index=[0])], ignore_index=True)
 
     # Compute Mol_median
-    cols_Mol = ['Mol_3m_IM','Mol_6m_IM','Mol_9m_IM','Mol_12m_IM']
+    cols_Mol = ['Mol_3m_IM','Mol_6m_IM','Mol_12m_IM']
     df['Mol_median'] = df[cols_Mol].median(axis=1)
     df['Mol_median'] = (df['Mol_median'] - 3.37) / 8.95 #standardization
 
